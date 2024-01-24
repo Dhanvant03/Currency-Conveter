@@ -1,0 +1,234 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: #bbe4e9;
+}
+
+@mixin flex() {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.container {
+   width: 100%;
+   height: 100vh;
+   @include flex();
+   color: white;
+   padding: 15px;
+
+   .c-card {
+      width: 380px;
+      // min-height: 45vh;
+      background: #53a8b6;
+      border-radius: 8px;
+      box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+      padding: 15px 20px;
+
+      .heading-div {
+         @include flex();
+         flex-direction: column;
+         gap: 5px;
+
+         img {
+            width: 35%;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            padding: 5px;
+         }
+      }
+
+      .convert-div {
+         margin-top: 20px;
+
+         form {
+            h2 {
+               text-transform: capitalize;
+               font-weight: 500;
+               letter-spacing: 1px;
+            }
+            .amount-input {
+               border: none;
+               outline: none;
+               width: 100%;
+               font-size: 20px;
+               background: transparent;
+               color: rgba(255, 255, 255, 0.8);
+               padding: 5px 8px;
+               border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+            }
+
+            .drop-down {
+               margin-block: 20px;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+
+               .form,
+               .to {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: start;
+                  justify-content: center;
+                  gap: 5px;
+
+                  p {
+                     font-size: 22px;
+                  }
+
+                  .select-container {
+                     @include flex();
+                     border: 1px solid rgba(255, 255, 255, 0.8);
+                     border-radius: 8px;
+                     padding-inline: 10px;
+                     gap: 10px;
+                     width: 7.5rem;
+                     position: relative;
+
+                     img {
+                        width: 2rem;
+                     }
+                     select {
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        font-size: 18px;
+                        color: white;
+                        width: auto;
+
+                        option {
+                           color: black;
+                        }
+                     }
+                  }
+               }
+
+               i {
+                  margin-top: 25px;
+                  font-size: 20px;
+               }
+            }
+
+            .msg {
+               font-size: 20px;
+               background: #79c2d0;
+               color: black;
+               // text-align: center;
+               text-transform: capitalize;
+               padding: 5px 10px;
+               border-radius: 5px;
+            }
+
+            .exchange-btn {
+               margin-top: 15px;
+               width: 100%;
+               border: none;
+               font-size: 16px;
+               padding: 8px 10px;
+               letter-spacing: 0.8px;
+               border-radius: 8px;
+               transition: 0.5s;
+               background: #5585b5;
+               color: white;
+
+               &:hover {
+                  cursor: pointer;
+                  background: darken($color: #5585b5, $amount: 10);
+               }
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 444px) {
+   .container {
+      .c-card {
+         .heading-div {
+            img {
+               width: 28%;
+            }
+            h1 {
+               font-size: 25px;
+            }
+         }
+      }
+
+      .convert-div {
+         form {
+            h2 {
+               font-size: 22px;
+            }
+            .drop-down {
+               .form,
+               .to {
+                  p {
+                     font-size: 20px;
+                  }
+               }
+
+               i {
+                  margin-top: 28px;
+                  font-size: 18px !important;
+               }
+            }
+
+            .msg {
+               font-size: 20px !important;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 375px) {
+   .container {
+      .c-card {
+         width: 100%;
+         .heading-div {
+            img {
+               width: 28%;
+            }
+            h1 {
+               font-size: 23px;
+               text-align: center;
+            }
+         }
+      }
+
+      .convert-div {
+         form {
+            h2 {
+               font-size: 22px;
+            }
+            .drop-down {
+               flex-direction: column;
+
+               .to {
+                  margin-top: 15px;
+               }
+
+               .form,
+               .to {
+                  p {
+                     font-size: 21px !important;
+                  }
+               }
+
+               i {
+                  font-size: 16px !important;
+                  transform: rotate(90deg);
+               }
+            }
+
+            .msg {
+               font-size: 18px !important;
+            }
+         }
+      }
+   }
+}

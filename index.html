@@ -1,1 +1,56 @@
-  
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Currency Conveter</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <main>
+         <div class="container">
+            <div class="c-card">
+               <div class="heading-div">
+                  <img src="Image/Image.png" alt="" />
+                  <h1>Currency Conveter</h1>
+               </div>
+
+               <div class="convert-div">
+                  <form>
+                     <h2>Amount</h2>
+                     <input class="amount-input" type="text" value="1" />
+                     <div class="drop-down">
+                        <div class="form">
+                           <p>Form</p>
+                           <div class="select-container">
+                              <img
+                                 src="https://flagsapi.com/IN/flat/64.png"
+                                 alt="img"
+                              />
+                              <select name="from"></select>
+                           </div>
+                        </div>
+                        <i class="fa-sharp fa-solid fa-right-left"></i>
+                        <div class="to">
+                           <p>To</p>
+                           <div class="select-container">
+                              <img
+                                 src="https://flagsapi.com/US/flat/64.png"
+                                 alt="img"
+                              />
+                              <select name="to"></select>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="msg">Exchange</div>
+                     <button class="exchange-btn">Get Exchange Rate</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </main>
+      <script src="codes.js"></script>
+      <script src="script.js"></script>
+   </body>
+</html>

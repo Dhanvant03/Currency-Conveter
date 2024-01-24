@@ -1,1 +1,187 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #bbe4e9;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 15px;
+}
+.container .c-card {
+  width: 380px;
+  background: #53a8b6;
+  border-radius: 8px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+  padding: 15px 20px;
+}
+.container .c-card .heading-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.container .c-card .heading-div img {
+  width: 35%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  padding: 5px;
+}
+.container .c-card .convert-div {
+  margin-top: 20px;
+}
+.container .c-card .convert-div form h2 {
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.container .c-card .convert-div form .amount-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 20px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 5px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+.container .c-card .convert-div form .drop-down {
+  margin-block: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .c-card .convert-div form .drop-down .form,
+.container .c-card .convert-div form .drop-down .to {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 5px;
+}
+.container .c-card .convert-div form .drop-down .form p,
+.container .c-card .convert-div form .drop-down .to p {
+  font-size: 22px;
+}
+.container .c-card .convert-div form .drop-down .form .select-container,
+.container .c-card .convert-div form .drop-down .to .select-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding-inline: 10px;
+  gap: 10px;
+  width: 7.5rem;
+  position: relative;
+}
+.container .c-card .convert-div form .drop-down .form .select-container img,
+.container .c-card .convert-div form .drop-down .to .select-container img {
+  width: 2rem;
+}
+.container .c-card .convert-div form .drop-down .form .select-container select,
+.container .c-card .convert-div form .drop-down .to .select-container select {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: white;
+  width: auto;
+}
+.container .c-card .convert-div form .drop-down .form .select-container select option,
+.container .c-card .convert-div form .drop-down .to .select-container select option {
+  color: black;
+}
+.container .c-card .convert-div form .drop-down i {
+  margin-top: 25px;
+  font-size: 20px;
+}
+.container .c-card .convert-div form .msg {
+  font-size: 20px;
+  background: #79c2d0;
+  color: black;
+  text-transform: capitalize;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.container .c-card .convert-div form .exchange-btn {
+  margin-top: 15px;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  padding: 8px 10px;
+  letter-spacing: 0.8px;
+  border-radius: 8px;
+  transition: 0.5s;
+  background: #5585b5;
+  color: white;
+}
+.container .c-card .convert-div form .exchange-btn:hover {
+  cursor: pointer;
+  background: #416c96;
+}
+
+@media (max-width: 444px) {
+  .container .c-card .heading-div img {
+    width: 28%;
+  }
+  .container .c-card .heading-div h1 {
+    font-size: 25px;
+  }
+  .container .convert-div form h2 {
+    font-size: 22px;
+  }
+  .container .convert-div form .drop-down .form p,
+  .container .convert-div form .drop-down .to p {
+    font-size: 20px;
+  }
+  .container .convert-div form .drop-down i {
+    margin-top: 28px;
+    font-size: 18px !important;
+  }
+  .container .convert-div form .msg {
+    font-size: 20px !important;
+  }
+}
+@media (max-width: 375px) {
+  .container .c-card {
+    width: 100%;
+  }
+  .container .c-card .heading-div img {
+    width: 28%;
+  }
+  .container .c-card .heading-div h1 {
+    font-size: 23px;
+    text-align: center;
+  }
+  .container .convert-div form h2 {
+    font-size: 22px;
+  }
+  .container .convert-div form .drop-down {
+    flex-direction: column;
+  }
+  .container .convert-div form .drop-down .to {
+    margin-top: 15px;
+  }
+  .container .convert-div form .drop-down .form p,
+  .container .convert-div form .drop-down .to p {
+    font-size: 21px !important;
+  }
+  .container .convert-div form .drop-down i {
+    font-size: 16px !important;
+    transform: rotate(90deg);
+  }
+  .container .convert-div form .msg {
+    font-size: 18px !important;
+  }
+}/*# sourceMappingURL=style.css.map */
